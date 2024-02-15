@@ -64,8 +64,7 @@ public class DBService implements DataAccessor {
 
     private String getSqlForChange(String name, String age){
         String sql = "UPDATE "+tableName+" SET ";
-        if(!Validator.ValidateIfSingleWord(name) ||
-                !Validator.ValidateIfSingleWord(age)){
+        if(!Validator.ValidateIfSingleWord(name) || !Validator.ValidateIfSingleWord(age)){
             System.out.println("getSqlForChange failed validation: "+name+"/"+age);
             return null;
         }

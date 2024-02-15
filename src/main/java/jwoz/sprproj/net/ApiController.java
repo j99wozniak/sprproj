@@ -21,9 +21,11 @@ public class ApiController {
     public ApiController(DBService dbService, MemoryService memoryService, Environment environment) {
         String dataService = environment.getProperty("dataaccessor");
         if(dataService.equals("DBService")){
+            System.out.println("Using db service");
             this.dataAccessor = dbService;
         }
         else{
+            System.out.println("Using memory service");
             this.dataAccessor = memoryService;
         }
         dbService.setTableName("persons");
