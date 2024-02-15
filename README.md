@@ -7,15 +7,16 @@
 4. Next time you want to run it, just launch Docker Desktop go to Containers and Start the mysql container 
 ## Run project
 1. Install IntelliJ IDEA [link](https://www.jetbrains.com/idea/download/)
-2. Make sure SDK in *File -> Project Structure -> Project* is set to 21
-3. In sprproj\src\main\resources\application.properties set dataaccessor to DBService to use mysql docker container as database. Set it to anything else to use local hashmap that behaves like a database
-4. Build and run
-5. Run tests (the mysql docker container needs to be running, regardless if the data accessor uses mysql docker or local hashmap)
+2. Pull this project by going to *File -> New -> Project from Version Controll...* and inserting URL `https://github.com/j99wozniak/sprproj.git`
+3. Make sure SDK in *File -> Project Structure -> Project* is set to 21
+4. In sprproj\src\main\resources\application.properties set dataaccessor to DBService to use mysql docker container as database. Set it to anything else to use local hashmap that behaves like a database
+5. Build and run
+6. Run tests (the mysql docker container needs to be running, regardless if the data accessor uses mysql docker or local hashmap)
     * ApiControllerTest are basic tests to see if the app builds, and presents an accessible api
     * DbViaApiTest are integration tests that actually check if the interaction with db/memory works while using the presented api
     * ValidatorTest are unit tests that check the functionality of the validator
-6. Use services like Postman ([link](https://www.postman.com/downloads/)) to make HTTP requests. The app doesn't have an UI, just REST API.
-7. To make sure that the app works, send this request:  
+7. Use services like Postman ([link](https://www.postman.com/downloads/)) to make HTTP requests. The app doesn't have an UI, just REST API.
+8. To make sure that the app works, send this request:  
 `http://localhost:8080/api/hello`
 ## Endpoints
 There are two users defined, Aleander/pass (with user role) and admin/pass! (with admin and user roles).
